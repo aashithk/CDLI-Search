@@ -1,0 +1,1 @@
+Making the Pnumber search case insensitive

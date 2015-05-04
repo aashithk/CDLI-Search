@@ -1,0 +1,74 @@
+/* .class
+	 #id
+	 element
+*/
+
+body {
+    background: #000;
+    color: white;
+    font-size: 13px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#header {
+    width: 1300px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-top: 1px solid #ffffff;
+    padding-bottom: 3px;
+}
+
+#entire {
+    width: 1300px;
+    padding-top: 20px;
+}
+
+.desc {
+    font-size: 13px;
+    width: 330px;
+}
+
+.cat {
+    width: 116px;
+    float: left;
+}
+
+.val {
+    width: 200px;
+    width: *;
+    float: left;
+}
+
+.row {
+    /* For elements that float left, clear forces
+       it to be on the next line */
+    clear: left;
+}
+
+.image {
+
+    width: 300px;
+    float: left;
+}
+
+#imglink {
+
+}
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.trans {
+    width: 300px;
+    float: left;
+    font-size: 11px;
+}
+
+.editingWindow {
+    width: 300px;
+    float: left;
+
+}

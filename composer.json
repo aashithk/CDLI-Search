@@ -1,0 +1,8 @@
+{
+    "require": {
+        "doctrine/orm": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    }
+}

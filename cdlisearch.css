@@ -1,0 +1,88 @@
+body {
+    font-size: 12px;
+    }
+
+table.cdli_search_fields td
+{
+   /* background-color: #161616;
+    border: 1px solid #0F0F0F;*/
+    padding: 2px;
+    font-size: 12px;
+}
+
+table.cdli_search_fields input, table.cdli_search_fields select
+{
+    font-size: 12px;
+}
+
+table.cdli_search_fields .no_style td
+{
+    background-color: #000000;
+    border-width: 0px;
+    font-size: 13px;
+}
+
+input {
+    font-size: 12px;
+    background-color: #ffffff;
+    }
+input#image {
+	background-color: #000000;
+}
+
+label#upload_trans{
+    background-color: #000000;
+    border-width: 0px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.loggedin {
+    color:#ffa500;
+    text-align:right;
+}
+
+a:link {
+    color: #0099FF;
+}
+tr.line_attr a:link{
+    color: #0099FF;
+}
+span#translation1{
+  color: grey;
+  padding-left: 20px;
+}
+
+span#translation {
+    color: #C1C1C1;
+    display: inline-block;
+    padding-left: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+span#markS{
+
+    color: grey;
+    padding-left: 2em;
+}
+span#markH{
+    color: grey;
+    padding-left: 2em;
+}
+
+span#markSNoSp {
+
+    color: grey;
+
+}
+
+span#markH{
+    color: grey;
+    padding-left: 2em;
+}
+span#markTrans{
+    display: inline-block;
+    padding-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+

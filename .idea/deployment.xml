@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="cdli.ucla.edu">
+    <serverData>
+      <paths name="cdli.ucla.edu">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/Library/WebServer/Documents/cdli/search" local="$PROJECT_DIR$" web="search" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
+

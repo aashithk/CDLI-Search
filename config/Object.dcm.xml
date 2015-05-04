@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="Object" table="cataloguesnew" read-only="true">
+        <indexes>
+            <index name="genre" columns="genre"/>
+            <index name="museum_no" columns="museum_no"/>
+            <index name="excavation_no" columns="excavation_no"/>
+            <index name="subgenre" columns="subgenre"/>
+            <index name="author" columns="author"/>
+            <index name="provenience" columns="provenience"/>
+            <index name="collection" columns="collection"/>
+            <index name="seal_id" columns="seal_id"/>
+            <index name="primary_publication" columns="primary_publication"/>
+            <index name="public" columns="public"/>
+        </indexes>
+        <id name="id" type="integer" column="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <one-to-one field="trans" target-entity="Trans" fetch="EAGER">
+            <join-column name="id_text" referenced-column-name="object_id"/>
+        </one-to-one>
+
+
+        <field name="objectId" type="integer" column="id_text" nullable="false"/>
+        <field name="accessionNo" type="text" column="accession_no" nullable="true"/>
+        <field name="arkNumber" type="string" column="ark_number" length="80" nullable="true"/>
+        <field name="atfSource" type="string" column="atf_source" length="150" nullable="true"/>
+        <field name="author" type="string" column="author" length="150" nullable="true"/>
+        <field name="cdliComments" type="text" column="cdli_comments" nullable="true"/>
+        <field name="citation" type="text" column="citation" nullable="true"/>
+        <field name="collection" type="string" column="collection" length="255" nullable="true"/>
+        <field name="composite" type="string" column="composite" length="80" nullable="true"/>
+
+        <field name="datesReferenced" type="text" column="dates_referenced" nullable="true"/>
+        <field name="dbSource" type="string" column="db_source" length="60" nullable="true"/>
+        <field name="designation" type="text" column="designation" nullable="true"/>
+        <field name="excavationNo" type="string" column="excavation_no" length="80" nullable="true"/>
+        <field name="genre" type="string" column="genre" length="80" nullable="true"/>
+        <field name="language" type="text" column="language" nullable="true"/>
+        <field name="material" type="string" column="material" length="150" nullable="true"/>
+
+        <field name="museumNo" type="string" column="museum_no" length="150" nullable="true"/>
+        <field name="objectRemarks" type="text" column="object_remarks" nullable="true"/>
+        <field name="objectType" type="text" column="object_type" nullable="true"/>
+        <field name="period" type="string" column="period" length="80" nullable="true"/>
+        <field name="primaryPublication" type="string" column="primary_publication" length="255" nullable="true"/>
+        <field name="provenience" type="string" column="provenience" length="80" nullable="true"/>
+        <field name="public" type="string" column="public" length="15" nullable="true"/>
+        <field name="publicAtf" type="string" column="public_atf" length="15" nullable="true"/>
+        <field name="publicImages" type="string" column="public_images" length="15" nullable="true"/>
+        <field name="publicationDate" type="string" column="publication_date" length="18" nullable="true"/>
+        <field name="publicationHistory" type="text" column="publication_history" nullable="true"/>
+        <field name="sealId" type="string" column="seal_id" length="80" nullable="true"/>
+        <field name="subgenre" type="string" column="subgenre" length="80" nullable="true"/>
+        <field name="translationSource" type="text" column="translation_source" nullable="true"/>
+
+    </entity>
+</doctrine-mapping>

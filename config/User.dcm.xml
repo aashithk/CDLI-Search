@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="User" table="webuser">
+        <id name="id" type="integer" column="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="username" type="text" column="username" nullable="true"/>
+        <field name="password" type="text" column="password" nullable="true"/>
+        <field name="collectionPassword" type="text" column="collection_password" nullable="true"/>
+        <field name="createdDate" type="datetime" column="created_date" nullable="true"/>
+        <field name="creator" type="text" column="creator" nullable="true"/>
+        <field name="admin" type="boolean" column="admin" nullable="true"/>
+        <field name="filtering" type="string" column="filtering" length="45" nullable="true"/>
+
+        <field name="canDownloadHdImages" type="boolean" column="can_download_hd_images" nullable="false"/>
+        <field name="canViewPrivateCatalogues" type="boolean" column="can_view_private_catalogues" nullable="false"/>
+        <field name="canViewPrivateTransliterations" type="boolean" column="can_view_private_transliterations"
+               nullable="false"/>
+        <field name="canEditTranliterations" type="boolean" column="can_edit_tranliterations" nullable="false"/>
+        <field name="canViewPrivateImages" type="boolean" column="can_view_private_images" nullable="false"/>
+        <field name="canViewIpadWeb" type="boolean" column="can_view_iPadWeb" nullable="false"/>
+        <one-to-many field="locks" target-entity="Lock" mapped-by="author"/>
+
+    </entity>
+</doctrine-mapping>

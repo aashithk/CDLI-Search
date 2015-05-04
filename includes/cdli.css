@@ -1,0 +1,66 @@
+/* stylesheet for CDLI web version */
+
+
+#text {
+	font-size: x-large;
+	font-weight: bold;
+}
+
+#type {
+	font-size: large;
+}
+
+#description {
+	text-align: center;
+	width: 55%;
+}
+
+#links {
+	width: 25%;
+}
+
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: small;
+  color: black;
+  /* padding: 0px;
+     margin: 0px; */
+     width:350%;
+  background-color: white;
+}
+
+h1 {
+  font-size: 1.6em;
+  margin-bottom: 0.1em;
+}
+h2 {
+  font-size: 1.4em;
+}
+h3 {
+  font-size: 1.2em;
+}
+
+div.index a{
+  text-decoration: underline;
+  color: black;
+ 
+} 
+a#index{
+text-decoration: underline;
+  color: black;
+ 
+}
+a{
+  text-decoration: none;
+ 
+}
+a:link {
+  color: gray;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color: #FF99FF;
+}
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="Trans" table="fulltrans">
+        <unique-constraints>
+            <unique-constraint name="object_id_2" columns="object_id"/>
+        </unique-constraints>
+        <id name="objectId" type="integer" column="object_id">
+        </id>
+
+        <!-- See Trans::setTextFieldsWithNewWholeText for details -->
+        <!-- the text part of tranliteration with line numbers removed -->
+        <field name="text" type="text" column="transliteration" nullable="true"/>
+        <!-- the text part of tranliteration with all the non-letter symbol and newlines (\n) removed-->
+        <field name="cleantext" type="text" column="transliteration_for_search" nullable="true"/>
+
+        <!-- oldCleantext is only for backward-compatibility -->
+        <field name="oldCleantext" type="text" column="transliteration_clean" nullable="true"/>
+        <!-- the full transliteration including text line numbers and comments, etc -->
+        <field name="wholetext" type="text" column="wholetext" nullable="true"/>
+        <one-to-many field="revHistories" target-entity="RevHistory" mapped-by="trans" fetch="EAGER">
+            <order-by>
+                <order-by-field name="modDate" direction="DESC"/>
+            </order-by>
+        </one-to-many>
+        <one-to-many field="locks" target-entity="Lock" mapped-by="trans"/>
+
+    </entity>
+</doctrine-mapping>
+
+
+
+
+
